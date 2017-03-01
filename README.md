@@ -1,2 +1,2 @@
 # wepackConfig
-tests with webpack config
+Webpack configuration for angularJs project with angular material

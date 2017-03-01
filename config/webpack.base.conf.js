@@ -59,7 +59,8 @@ const postcss = [
 
 const webpackConfig = {
   entry: {
-    app: path.join(config.dev.sourcePath, config.dev.entryPoint)
+    // vendor: path.join(config.dev.sourcePath, config.dev.vendorEntryPoint),
+    app: path.join(config.dev.entryPointPath, config.dev.entryPoint),
   },
   output: {
     path: config.build.distRoot,
@@ -71,7 +72,13 @@ const webpackConfig = {
   },
   resolve: {
     extensions: ['', '.ts', '.js', '.tsx', '.html'],
-    fallback: ['./node_modules']
+    fallback: ['./node_modules'],
+    alias: {
+      'src': path.resolve(__dirname, '../src'),
+      'assets': path.resolve(__dirname, '../src/assets'),
+      'scss': path.resolve(__dirname, '../scss'),
+      'components': path.resolve(__dirname, '../src/components')
+    }
   },
   module: {
     loaders

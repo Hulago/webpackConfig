@@ -1,2 +1,1 @@
-# wepackConfig
-tests with webpack config
+# Webpack 2 configuration for angular

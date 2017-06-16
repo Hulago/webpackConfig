@@ -9,7 +9,9 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.ts'
+    'polyfills': './src/polyfills.ts',
+    'vendor': './src/vendor.ts',
+    'app': './src/main.ts'
   },
   output: {
     path: config.build.assetsRoot,
@@ -21,7 +23,6 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json', '.ts', '.tsx', '.json', '.html', '.scss', '.css'],
     alias: {
-      'vue$': 'vue/dist/vue.common.js',
       'assets': resolve('src/assets'),
       'constants': resolve('src/constants'),
       'managers': resolve('src/managers'),
@@ -35,15 +36,15 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/, 
-        loader: 'ts-loader', 
+        loaders: [
+          {
+            loader: 'awesome-typescript-loader',
+            options: { configFileName: resolve('tsconfig.json') 
+          }
+          }, 'angular2-template-loader'
+          ], 
         include: [resolve('src')], 
-        exclude: /node_modules/,
-        options: { appendTsSuffixTo: [/\.vue$/] }
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: vueLoaderConfig
+        exclude: /node_modules/
       },
       {
         test: /\.jsx?$/,
@@ -72,7 +73,7 @@ module.exports = {
       },
       {
         test: /\.html$/, 
-        loader: 'vue-html-loader', 
+        loader: 'html-loader', 
         include: [resolve('src')], 
         exclude: /node_modules/
       },

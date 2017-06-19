@@ -1,16 +1,19 @@
+import { Component } from '@angular/core';
+
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { BrowserModule  } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 
 import { MainComponent } from './main.component';
-
-const routes: Routes = [
-  { path: 'path', component: MainComponent },
-];
+import { HomeComponent } from './home/home.component';
+import { MainRoutingModule } from './main-routing.module'
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  imports: [
+    BrowserModule,
+    MainRoutingModule
+  ],
+  declarations: [MainComponent, HomeComponent],
+  providers: [/* TODO: Providers go here */],
 })
-export class MainRoutingModule { }
-
-export const routedComponents = [MainComponent];
+export class MainModule { }

@@ -3,8 +3,6 @@
    "module": "commonjs",
    "moduleResolution": "node",
    "target": "es5",
-   "jsx": "preserve",
-   "jsxFactory": "createElement",
    "sourceMap": true,
    "allowJs": true,
    "emitDecoratorMetadata": true,

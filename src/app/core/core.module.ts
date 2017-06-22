@@ -1,7 +1,7 @@
-// import 'izitoast/dist/css/iziToast.min.css';
 import { NgModule } from '@angular/core';
-import * as iziToast from 'izitoast';
 
+import * as iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 import { IZITOAST_TOKEN, NotificationService } from './notification.service'
 

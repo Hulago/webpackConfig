@@ -21,15 +21,12 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.ts', '.tsx', '.json', '.html', '.scss', '.css'],
+    extensions: ['.css', '.js', '.vue', '.json', '.ts', '.tsx', '.json', '.html', '.scss'],
     alias: {
       'app': resolve('src/app'),
       'constants': resolve('src/constants'),
-      'managers': resolve('src/managers'),
-      'components': resolve('src/components'),
-      'models': resolve('src/models'),
-      'router': resolve('src/router'),
-      'views': resolve('src/views')
+      'assets': resolve('src/assets'),
+      'models': resolve('src/models')
     }
   },
   module: {

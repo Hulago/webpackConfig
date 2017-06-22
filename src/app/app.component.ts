@@ -1,5 +1,3 @@
-// import 'element-ui/lib/theme-default/index.css'
-
 import { Component } from '@angular/core';
 
 @Component({

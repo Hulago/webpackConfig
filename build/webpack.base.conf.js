@@ -23,7 +23,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json', '.ts', '.tsx', '.json', '.html', '.scss', '.css'],
     alias: {
-      'assets': resolve('src/assets'),
+      'app': resolve('src/app'),
       'constants': resolve('src/constants'),
       'managers': resolve('src/managers'),
       'components': resolve('src/components'),

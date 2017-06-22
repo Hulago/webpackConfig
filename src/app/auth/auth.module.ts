@@ -2,29 +2,29 @@ import { Component } from '@angular/core';
 
 
 import { NgModule } from '@angular/core';
-import { BrowserModule  } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 
 import { AuthComponent } from './auth.component';
-import { ConfirmPasswordComponent }   from './confirm-password/confirm-password.component';
-import { LoginComponent }             from './login/login.component';
-import { ResetComponent }             from './reset/reset.component';
-import { SignupComponent }             from './signup/signup.component';
+import { ConfirmPasswordComponent } from './confirm-password/confirm-password.component';
+import { LoginComponent } from './login/login.component';
+import { ResetComponent } from './reset/reset.component';
+import { SignupComponent } from './signup/signup.component';
 
 import { AuthRoutingModule } from './auth-routing.module'; //TODO: Create app.routing
 
 @NgModule({
   imports: [
-    BrowserModule,
+    CommonModule,
     AuthRoutingModule
   ],
   declarations: [
     AuthComponent,
     ConfirmPasswordComponent,
     LoginComponent,
-    ResetComponent,        
+    ResetComponent,
     SignupComponent
-    ],
+  ],
   providers: [/* TODO: Providers go here */],
 })
 export class AuthModule { }

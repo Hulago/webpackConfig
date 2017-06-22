@@ -5,7 +5,7 @@ import { Error404Component } from './shared/error-404/error-404.component'
 import { AuthModule } from './auth/auth.module';
 import { MainModule } from './main/main.module';
 
-const mainRoutes: Routes = [
+const AppRoutes: Routes = [
   { path: '', redirectTo: '/main/home', pathMatch: 'full' },
   { path: '**', component: Error404Component }
 ];
@@ -14,10 +14,10 @@ const mainRoutes: Routes = [
   imports: [
     MainModule,
     AuthModule,
-    RouterModule.forRoot(mainRoutes)
+    RouterModule.forRoot(AppRoutes)
   ],
   exports: [
     RouterModule
   ]
 })
-export class MainRoutingModule { }
+export class AppRoutingModule { }

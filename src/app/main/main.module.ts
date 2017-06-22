@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 
 import { MainComponent } from './main.component';
 import { HomeComponent } from './home/home.component';
+import { DetailComponent } from './detail/detail.component';
 import { MainRoutingModule } from './main-routing.module'
 
 @NgModule({
@@ -13,7 +14,7 @@ import { MainRoutingModule } from './main-routing.module'
     BrowserModule,
     MainRoutingModule
   ],
-  declarations: [MainComponent, HomeComponent],
+  declarations: [MainComponent, HomeComponent, DetailComponent],
   providers: [/* TODO: Providers go here */],
 })
 export class MainModule { }
